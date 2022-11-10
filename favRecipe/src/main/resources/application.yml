@@ -1,0 +1,30 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  sql:
+    init:
+      platform: postgresql
+      mode: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://abul.db.elephantsql.com:5432/etahwekj
+    username: etahwekj
+    password: a1AUo5ScChKUcSPZbN9XyKT_kgDiI62-
+    hikari:
+      connectionTimeout: 2000
+      maximumPoolSize: 5
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    ## Logging settings
+debug: true
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
